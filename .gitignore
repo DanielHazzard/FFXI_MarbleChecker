@@ -18,10 +18,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # Bin / Debug
-bin/*
+/bin
 
 #Object Bin
-obj/*
+/obj
 
 # =========================
 # Operating System Files
