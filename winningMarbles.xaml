@@ -1,4 +1,4 @@
-﻿<Controls:MetroWindow x:Class="FFXI_MarbleChecker.marbleViewer"
+﻿<Controls:MetroWindow x:Class="FFXI_MarbleChecker.winningMarbles"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:FFXI_MarbleChecker"
         mc:Ignorable="d"
-        Title="Final Fantasy XI Mog Bonanza Checker : Marble Viewer" Height="600" Width="450"
+        Title="Final Fantasy XI Mog Bonanza Checker: Winning Marbles" Height="600" Width="450"
         BorderThickness="0" 
         GlowBrush="Black"
         ResizeMode="NoResize"
@@ -14,10 +14,15 @@
         WindowTransitionsEnabled="False"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="511" Margin="10,10,0,0" VerticalAlignment="Top" Width="424">
-            <ListBox x:Name="enabledMarbles" HorizontalAlignment="Left" Height="511" VerticalAlignment="Top" Width="424"/>
-        </ScrollViewer>
-        <Button Content="Delete Selected Characters Marbles" Click="DeleteMarbles_Click" HorizontalAlignment="Left" Margin="5,534,0,0" VerticalAlignment="Top" Width="434"/>
+        <ListBox x:Name="winningMarbleNumbers" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="442" FontSize="14"/>
+
+
+
+
+
+
+
+
 
     </Grid>
 </Controls:MetroWindow>

@@ -13,6 +13,8 @@ using System;
 using System.ComponentModel;
 using System.Threading;
 using System.Runtime.InteropServices;
+using WinningMarbles;
+using System.Collections.Generic;
 
 namespace FFXI_MarbleChecker
 {
@@ -30,6 +32,7 @@ namespace FFXI_MarbleChecker
 
         public bool automaticCheck = false;
         public ListBox processids = new ListBox();
+
 
         public static EliteAPI api;
 
@@ -139,14 +142,27 @@ namespace FFXI_MarbleChecker
 
         private void BeginCheck_Click(object sender, RoutedEventArgs e)
         {
+            bool isWindowOpen = false;
 
-        }
+            foreach (Window w in Application.Current.Windows)
+            {
+                if (w is winningMarbles)
+                {
+                    isWindowOpen = true;
+                    w.Activate();
+                }
+            }
+            if (!isWindowOpen)
+            {
+                winningMarbles subWindow = new winningMarbles();
+                subWindow.Show();
+            }
+    }
 
         private void AddMarble_Click(object sender, RoutedEventArgs e)
         {
             // characterName
             // MarbleNumber
-            // emp.Elements("Phone").Single(phoneElement => phoneElement.Attribute("Type").Value == "Home").Value
             XDocument xdoc = XDocument.Load("data/CharacterData.xml");
 
             int foundCharacter = 0;
