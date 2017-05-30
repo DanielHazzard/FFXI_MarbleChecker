@@ -7,6 +7,22 @@ Automatically stores purchased marbles and allows for mass checking of winning n
 
 
 
-###Download
 
-https://github.com/DanielHazzard/FFXI_MarbleChecker/releases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Download: https://github.com/DanielHazzard/FFXI_MarbleChecker/releases
